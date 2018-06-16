@@ -17,7 +17,7 @@ const inputs = {
 let state = FREE,
     frame = 0,
     x     = canvas.width/2,
-	  y     = canvas.height/2;
+    y     = canvas.height/2;
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowLeft')  inputs.left  = true;
@@ -32,11 +32,11 @@ document.addEventListener('keyup', (event) => {
   if (event.key === 'ArrowDown')  inputs.down  = false; });
 
 document.addEventListener('keypress', (event) => {
-	if (event.key === 'f')   state = FREE;
-	if (event.key === 'r') { initRecord();
-													 state = RECORD; }
-	if (event.key === 'p') { initPlay();
-													 state = PLAY; } });
+  if (event.key === 'f')   state = FREE;
+  if (event.key === 'r') { initRecord();
+                           state = RECORD; }
+  if (event.key === 'p') { initPlay();
+                           state = PLAY; } });
 
 function handleInput() {
   if (inputs.left)  x -= 1;
@@ -74,7 +74,7 @@ function updateFill() {
 }
 
 function circle(x, y) { ctx.beginPath();
-	ctx.arc(x, y, 25, 0, 2*Math.PI);
-	ctx.closePath();
-	ctx.fill();
+  ctx.arc(x, y, 25, 0, 2*Math.PI);
+  ctx.closePath();
+  ctx.fill();
 }
